@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    background-color: #CFEADC;
+    /* The main backgound color of the website, which make contrast with the smaller area background. */
+    padding: 50px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+  :root{
+    --col01:#CFEADC;
+    --col02:#FEDEE1;
+    --col03:#B7E0FF;
+    /* The color style of website is formed by Macaroon color style, to make users to feel the warmth and healing of the site. */
+    --border01:2px dotted #768BA0;
+    --border02:2px dashed #768BA0;
+    --border03:2px dotted #768BA0;
+    /* Different types of lines are added on the edge of the basic column to make the border more prominent. */
+}
+
+#background {
+    display: grid;
+    height: 200vh;
+    margin: 125px;
+    background-color:#FBEDCA;
+    /* Brighter background color to highlight the column in the centre of the page.  */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
+    gap: 10px;
+    column-gap: 20px;
+}
+
+.margin {
+    margin-top: 10px;
+    border-color: #FEDEE1;
+}
+ 
+#a {
+    background-color: var(--col02);
+    /* a to e columns have same color pink which I set on the root as col02. */
+    border: var(--border01);
+    /* a to e columns have same border style which is dotted line. */
+    grid-row: 1/3;
+}
+
+#b {
+    background-color: var(--col02);
+    border: var(--border03);
+    grid-row: 2/4;
+}
+
+#c {
+    background-color: var(--col02);
+    border: var(--border01);
+    grid-row: 1/3;
+}
+
+#d {
+    background-color: var(--col02);
+    border: var(--border03);
+    grid-row: 2/4;
+}
+
+#e {
+    background-color: var(--col02);
+    border: var(--border01);
+    grid-row: 1/3;
+}
+
+#f {
+    background-color: var(--col03);
+    /* f use different color blue I set on the root as col03. */
+    border: var(--border02);
+    /* The border line of f is dashed line, to keep it separate from the others. */
+    grid-row: 4/6;
+    grid-column: 1/6;
+}
