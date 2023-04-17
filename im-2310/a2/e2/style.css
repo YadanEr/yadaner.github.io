@@ -1,0 +1,135 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#813b00;
+  --col-02:#fcfcfc;
+  --col-03:#e1a01b;
+  --col-04:#cdac8c;
+  --border: 1px solid var(--col-02);
+}
+/* Using warm colors to better reflect the delicious food and the texture of the picture. */
+/* Cold colours like blue, purple and black could decrease people's appetites. */
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction:column;
+  border: var(--border);
+  border-style:dashed;
+}
+
+.FilterSection{
+
+}
+
+.FilterBox{
+
+}
+
+.FilterButton{
+  color:#813b00;
+}
+
+.SelectedFilter{
+  color: #e1a01b;
+}
+
+.RecipeLink{
+  color: rgb(253, 231, 132);
+  text-decoration: underline;
+  text-decoration-color:#fcfcfc;
+  text-decoration-style: dashed;
+}
+/* Use color and underline to distinguish the rest of the text */
+.RecipeName{
+
+}
+
+.Author{
+
+}
+
+.RecipeImageContainer{
+
+}
+
+.RecipeImg{
+
+}
+
+.Attribution{
+   color: rgb(253, 231, 132);
+}
+
+.Attribution a{
+  color:rgb(253,231,132);
+}
+/* The link color is same with attribution, and after it visited the link will change color. */
+.Attribution a:visited{
+  color: aqua;
+}
+/* The link has visited will change the color */
+.Publisher{
+
+}
+
+.Cuisine{
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+/* This is one of the new filters I created, using the double underline to male it more obvious. */
+.TimeToCook{
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+/* Here is a new filter. */
+.SkillLevel{
+
+}
+
+.Course{
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+/* Here is a new filter. All of my new filters using the double underline, users can see the focus point clearly.*/
+.Servings{
+
+}
+
+.Dietary{
+
+}
+
+.DatePublished{
+
+}
+
+.DateUpdated{
+
+}
+
+.SpecialEquipment{
+
+}
+
