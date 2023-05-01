@@ -12,10 +12,10 @@
 :root{
   /* first two colours come from Kuroi's Manga Pallete Palette */
   /* https://lospec.com/palette-list/manga-pallete */
-  --col-01:#171219;
-  --col-02:#f2fbeb;
-  --col-03:#5252ff;
-  --col-04:#b6e878;
+  --col-01:#20283d;
+  --col-02:#fbf7f3;
+  --col-03:#e5b083;
+  --col-04:#42635d;
   font-size: 16px;
   /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
   scroll-behavior: smooth;
@@ -95,8 +95,12 @@ li ul{
   float: right;
   /* note the use of position: sticky to keep the button on the page even with scrolling */
   position: sticky;
+  background-color: #e5b083;
+  border-radius: 10px ;
   top: 1rem;
+  padding: 10px;
 }
+/* In this section, I added a background border to mode bottom so that the user can know exactly where it is */
 
 /* code for loading page */
 
@@ -110,18 +114,48 @@ li ul{
 /* changing button to look like a link */
 #load-link{
   line-height: 1rem;
-  background-color: transparent;
-  border: 0;
+  background-color:#e5b083;
+  border-radius: 10px;
+  border:dashed;
+  padding: 10px;
+  cursor: pointer;
 }
+/* Based on the original load body, I added a rounded dotted border and filled it with a new color. */
+/* Added the cursor style to let the user know that the element is clickable */ 
+
 /* throbber while page is fake loading */
 #load-throbber{
   /* the width, height and background-color give it a shape on the page without any content inside - 
   these value are arbitrary, please change to create your own design  */
   width: 25%;
-  height: 1rem;
-  background-color: var(--col-03);
+  height: 2em;
+  background-color: var(--col-04);
+  border-radius: 10px;
   /* we also initially set display to none so it only shows once the link is clicked */
   display: none;
+}
+
+#load-throbber::before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 100%;
+  margin: 0;
+  background-color: var(--col-02);
+  border-radius: 10px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse{
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }
 
 /* Media Queries */
