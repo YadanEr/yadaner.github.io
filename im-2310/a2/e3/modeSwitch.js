@@ -3,7 +3,7 @@
 // first we declare a global boolean to keep track of what mode we're in - by default we're starting in light mode
 // instead of needing two variables we can phrase it as isDark - so if isDark is true
 // it's in dark mode, but if isDark is false it's in light mode
-let isDark = false;
+let isDark = true;
 
 // before we go messing about with our colour palette we set the default values - these are the same colour values as our CSS
 let darkCol = "#20283d"; 
@@ -37,12 +37,12 @@ function switchModes(){
     document.documentElement.style.setProperty("--col-02", darkCol);
     document.documentElement.style.setProperty("--col-01", lightCol);
     // finally we want to update the text in the button
-    document.getElementById("mode-button").innerHTML = "Dark Mode";
+    document.getElementById("mode-button").innerHTML = "Light Mode";
   } else {
     /* change to dark mode - same statements as above but in reverse */
     isDark = true;
     document.documentElement.style.setProperty("--col-02", lightCol);
     document.documentElement.style.setProperty("--col-01", darkCol);
-    document.getElementById("mode-button").innerHTML = "Light Mode";
+    document.getElementById("mode-button").innerHTML = "Dark Mode";
   }
 }

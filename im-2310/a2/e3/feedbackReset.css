@@ -1,8 +1,17 @@
 nav ol li a {
-  color: var(--col-01);
+  color: #20283d;
+  background-color: #e5b083;
   text-decoration: none;
-  cursor: default;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.01rem;;
 }
+
+nav ol li a:hover {
+  background-color: #42635d;
+  color: #fbf7f3;
+}
+
 
 #mode-button{
   background-color: transparent;

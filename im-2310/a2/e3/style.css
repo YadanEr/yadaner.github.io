@@ -28,7 +28,7 @@ body{
   transition: 1s ease-in-out;
   transition: 1s background-color ease-in-out;
 }
-
+/* Transition of the background color if the user clicked the dark/light mode bottom, and it takes 1s for transition. */
 nav {
   margin-top: 1rem;
 }
@@ -99,7 +99,7 @@ li ul{
   position: sticky;
   background-color: #e5b083;
   color:#42635d;
-  border-radius: 10px ;
+  border-radius: 10px;
   top: 1rem;
   padding: 10px;
   cursor: pointer;
