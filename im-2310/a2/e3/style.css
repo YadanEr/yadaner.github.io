@@ -25,6 +25,8 @@ body{
   padding: 1rem;
   background-color: var(--col-02);
   color: var(--col-01);
+  transition: 1s ease-in-out;
+  transition: 1s background-color ease-in-out;
 }
 
 nav {
@@ -96,7 +98,7 @@ li ul{
   /* note the use of position: sticky to keep the button on the page even with scrolling */
   position: sticky;
   background-color: #e5b083;
-  color: #20283d;
+  color:#42635d;
   border-radius: 10px ;
   top: 1rem;
   padding: 10px;
@@ -108,7 +110,7 @@ li ul{
   background-color: #42635d;
   color: #fbf7f3;
 }
-/* Here is a hover element for the mode button, to display that the users have select the right buttom. */
+/* Here is a active element for the mode button, to display that the users have select the right buttom. */
 /* code for loading page */
 
 #load-body{
@@ -130,11 +132,11 @@ li ul{
 /* Based on the original load body, I added a rounded dotted border and filled it with a new color. */
 /* Added the cursor style to let the user know that the element is clickable */ 
 
-#load-link:hover{
+#load-link:active{
   background-color: #42635d;
   color: #fbf7f3;
 }
-/* Here is a hover of the load-link, the color related to the load-throbber. */
+/* Here is a active element of the load-link, to make users notice that they have clicked this element. And the color related to the load-throbber. */
 
 /* throbber while page is fake loading */
 #load-throbber{
@@ -148,7 +150,7 @@ li ul{
   display: none;
 }
 
-#load-throbber::before {
+#load-throbber:before {
   content: "";
   display: block;
   width: 0%;
@@ -156,7 +158,7 @@ li ul{
   margin: 0;
   background-color: var(--col-04);
   border-radius: 10px;
-  animation: fill 10s ease-in-out infinite;
+  animation: fill 10.25s ease-in-out;
 }
 /*  */
 
@@ -173,7 +175,7 @@ li ul{
   80% {
     width: 80%;
   }
-  99% {
+  100% {
     width: 100%;
   }
 }

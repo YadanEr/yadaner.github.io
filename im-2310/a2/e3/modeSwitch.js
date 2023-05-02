@@ -6,8 +6,9 @@
 let isDark = false;
 
 // before we go messing about with our colour palette we set the default values - these are the same colour values as our CSS
-let darkCol = "#171219";
-let lightCol = "#f2fbeb";
+let darkCol = "#20283d"; 
+let lightCol = "#fbf7f3";
+// dark and light color changed
 
 // as we'll discuss in class with prefers-reduced-motion we can check user system preferences - in this case we'll 
 // check if they have dark mode turned on - if so we'll instead set isDark to true and change the CSS variables
@@ -15,8 +16,8 @@ let lightCol = "#f2fbeb";
 // see my comments below for how this works
 if(window.matchMedia("(prefers-color-scheme: dark)").matches){
   isDark = true;
-  document.documentElement.style.setProperty("--col-01", lightCol);
-  document.documentElement.style.setProperty("--col-02", darkCol);
+  document.documentElement.style.setProperty("--col-02", lightCol);
+  document.documentElement.style.setProperty("--col-01", darkCol);
   document.getElementById("mode-button").innerHTML = "Light Mode";
 }
 
@@ -33,15 +34,15 @@ function switchModes(){
     // the first step is to update our isDark value to the new state of the page
     isDark = false;
     // then we want to update our underlying custom CSS variables
-    document.documentElement.style.setProperty("--col-01", darkCol);
-    document.documentElement.style.setProperty("--col-02", lightCol);
+    document.documentElement.style.setProperty("--col-02", darkCol);
+    document.documentElement.style.setProperty("--col-01", lightCol);
     // finally we want to update the text in the button
     document.getElementById("mode-button").innerHTML = "Dark Mode";
   } else {
     /* change to dark mode - same statements as above but in reverse */
     isDark = true;
-    document.documentElement.style.setProperty("--col-01", lightCol);
-    document.documentElement.style.setProperty("--col-02", darkCol);
+    document.documentElement.style.setProperty("--col-02", lightCol);
+    document.documentElement.style.setProperty("--col-01", darkCol);
     document.getElementById("mode-button").innerHTML = "Light Mode";
   }
 }
