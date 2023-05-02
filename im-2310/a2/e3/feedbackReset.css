@@ -11,7 +11,9 @@ nav ol li a:hover {
   background-color: #42635d;
   color: #fbf7f3;
 }
-
+/* I added a border with radians to each sequence element and added hover.
+When the user moves the mouse over a line header of a sequence element, 
+different background and font colors appear. */
 
 #mode-button{
   background-color: transparent;
