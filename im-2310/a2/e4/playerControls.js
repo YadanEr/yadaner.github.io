@@ -6,6 +6,7 @@ let videoElement = document.getElementById("videoElement");
 // the buttons for the controls
 let playButton = document.getElementById("playButton");
 let muteButton = document.getElementById("muteButton");
+let fastForwardBotton = document.getElementById("fastForwardButton");
 // the progress element
 let progressBar = document.getElementById("progressBar");
 
@@ -160,6 +161,25 @@ function muteUnmute(){
 }
 
 muteButton.addEventListener("click", muteUnmute);
+
+/*fastForward */
+// The fastForward function is called when the user clicks on an HTML element with the ID "fastForwardButton".
+// It allows users to fast forward to the part they want to watch more efficiently when watching videos.
+
+function fastForward(){
+  if (videoElement.paused){
+    videoElement.currentTime +=10;
+    fastForwardButton.style.backgroundImage = "url('./icons/fastForward.svg')";
+    //If the video is paused, increase the current video time by 10 seconds and change the button style to a "fast forward" icon.
+  } else {
+    videoElement.pause();
+    videoElement.currentTime +=10;
+    videoElement.play();
+    //If the video is playing, pause the video, then increase the current video time by 5 seconds, and finally play the video again.
+  }
+}
+
+document.getElementById("fastForwardButton").addEventListener("click", fastForward);
 
 /* HELPER FUNCTIONS */
 

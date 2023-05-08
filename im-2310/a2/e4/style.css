@@ -1,6 +1,8 @@
 *{
   box-sizing: border-box;
   background-origin: border-box;
+  background-color: var(--col-04);
+  /* Add a background colour for the website */
   margin: 0;
 }
 
@@ -8,17 +10,18 @@
 /* https://lospec.com/palette-list/1bit-monitor-glow */
 /* you're welcome to change the colours if you want or any of the other general page style */
 :root{
-  --col-01:#222323;
-  --col-02:#f0f6f0;
-  --col-03:#5252ff;
-  --col-04:#b6e878;
-  --col-05:#bcbdbc;
-  --col-06:#6f6f6f;
-  --border: 1px solid var(--col-02);
+  --col-01:#260d34;
+  --col-02:#ffffff;
+  --col-03:#452459;
+  --col-04:#fe6c90;
+  --col-05:#d03791;
+  --col-06:#87286a;
+  --border: 1px solid var(--col-01);
+  /* Apply the new colour pallet I think cooperate with the video. */
 }
 
 .video-player-wrapper{
-  display: flex;
+  display:flex;
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
@@ -33,7 +36,7 @@
 
 #videoElement{
   width: 100%;
-  grid-column: 1/2;
+  grid-column: 1/4;
   grid-row: 1/2;
 }
 
@@ -63,6 +66,8 @@
   padding: .1rem;
   border: none;
   cursor: pointer;
+  background-color: var(--col-02);
+  /* set a background colour for the video control button, to see the different with the website background. */
 }
 .video-control-button:hover{
   background-color: var(--col-05);
@@ -82,6 +87,10 @@
   background-image: url('./icons/mute.svg');
 }
 
+#fastForwardButton{
+  background-image: url('./icons/fastForward.svg');
+}
+
 .video-progress-bar{
   /* Reset the default appearance */
   -webkit-appearance: none;
@@ -95,15 +104,16 @@
   box-shadow: 0 1px 2px var(--col-02) inset;
 }
 ::-moz-progress-bar {
-  background-color: var(--col-02);
+  background-color: var(--col-05);
 }
 
 ::-webkit-progress-bar {
   background-color: var(--col-01);
   box-shadow: 0 1px 2px var(--col-02) inset;
+  /* Adjusted the colour of progress bar, to make contrast with the video control buttons. */
 }
 ::-webkit-progress-value {
-  background-color: var(--col-02);
+  background-color: var(--col-05);
 }
 
 .timeline-loading{
