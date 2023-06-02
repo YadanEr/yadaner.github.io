@@ -8,13 +8,74 @@
 
         <link rel="stylesheet" href="style.css">
 
-        <script src="script.js"></script>
+        <script src="fliter.js" defer></script>
+
+        <title>K-pop Mini Collection</title>
     
     </head>
 
     <body>
 
-        <h1>Test Test</h1>
+        <h2>K-pop Boom</h2>
+        
+        <hr class="custom-hr">
+
+        <div class="FilterSection">     
+
+            <details class="FilterBox">
+                <summary>Gender</summary>
+                <button class="FilterButton" onclick='filterCategory("F", this)'>Female</button>
+                <button class="FilterButton" onclick='filterCategory("M", this)'>Male</button>
+                <button class="FilterButton" onclick='filterCategory("GroupBox", this)'>All Groups</button>
+            </details>
+
+            <details class="FilterBox">
+              <summary>Company</summary>
+              <button class="FilterButton" onclick='filterCategory("Be", this)'>Belift</button>
+              <button class="FilterButton" onclick='filterCategory("Bi", this)'>Big Hit Music</button>
+              <button class="FilterButton" onclick='filterCategory("Cu", this)'>Cube</button>
+              <button class="FilterButton" onclick='filterCategory("JYP", this)'>JYP</button>
+              <button class="FilterButton" onclick='filterCategory("Ple", this)'>Pledis Entertainment</button>
+              <button class="FilterButton" onclick='filterCategory("St", this)'>Starship</button>
+              <button class="FilterButton" onclick='filterCategory("SM", this)'>SM</button>
+              <button class="FilterButton" onclick='filterCategory("YG", this)'>YG</button>
+            </details>
+
+            <details class="FilterBox">
+                <summary>Years active</summary>
+                <button class="FilterButton" onclick='filterCategory("2015", this)'>2015</button>
+                <button class="FilterButton" onclick='filterCategory("2016", this)'>2016</button>
+                <button class="FilterButton" onclick='filterCategory("2017", this)'>2017</button>
+                <button class="FilterButton" onclick='filterCategory("2018", this)'>2018</button>
+                <button class="FilterButton" onclick='filterCategory("2019", this)'>2019</button>
+                <button class="FilterButton" onclick='filterCategory("2020", this)'>2020</button>
+                <button class="FilterButton" onclick='filterCategory("2021", this)'>2021</button>
+            </details>
+
+            <details class="FilterBox">
+              <summary>No. of members</summary>
+              <button class="FilterButton" onclick='filterCategory("4 5", this)'>1~5</button>
+              <button class="FilterButton" onclick='filterCategory("6 7 8", this)'>6~8</button>
+              <button class="FilterButton" onclick='filterCategory("9 10", this)'>9~10</button>
+              <button class="FilterButton" onclick='filterCategory("13", this)'>>10</button>
+            </details>
+
+        </div>
+
+        <hr class="custom-hr">
+
+            <!-- Group 1 -->
+        <div class="GroupBox F SM 2021 4 ">
+            <div class="GroupLink">Official Website: https://aespa-official.jp/</div>
+
+            <div class="GroupName">Band Name: aespa</div>
+
+            <div class="GroupImageContainer">
+
+                <img class="GroupImg" src="./images/aespa.jpg" alt="aespa"/>
+
+        
+      
 
     </body>
 
