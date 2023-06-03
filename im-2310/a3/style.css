@@ -9,6 +9,7 @@
     --col-02:#fbf7f3;
     --col-03:#fcabac;
     --col-04:#ff7d6e;
+    --col-05:#292831;
     font-size: 16px;
     scroll-behavior: smooth;
   }
@@ -99,7 +100,12 @@
   .res-columns{
     column-width: 25rem;
   }
-  
+
+  .GroupImageContainer {
+    width: 20%;
+    height: 30%;
+  }
+
   #load-body{
     height: 100vh;
     display: flex;
