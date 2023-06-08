@@ -40,12 +40,13 @@
   
   h1{
     font-size: 3rem;
+    color: var(--col-03);
   }
   
   h2{
     font-size: 5rem;
     text-align: center;
-    color: var(--col-01);
+    color: var(--col-03);
   }
   
   p{
@@ -54,9 +55,45 @@
     color: var(--col-01);
   }
 
+  .FilterSection{
+    width: 300px;
+    padding: 10px;
+    background-color: var(--col-04);
+    color: var(--col-02);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .FilterBox {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .FilterButton {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: var(--col-02);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
   .GroupImg {
     width: 1200px;
     height: auto;
+  }
+
+  .GroupName {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .GroupLink {
+    text-decoration: underline;
+    cursor: pointer;
   }
   .summary{
     font-size: 1rem;
